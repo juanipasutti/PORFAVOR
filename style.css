@@ -1,0 +1,538 @@
+/* Tipografía base */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #111;
+  scroll-behavior: smooth;
+} */
+
+/* Fondo animado con signos $ */
+.background-symbols {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500vh;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.background-symbols span {
+  position: absolute;
+  font-size: 2rem;
+  color: rgba(200, 255, 100, 0.06);
+  animation: floatDollar 25s linear infinite;
+  user-select: none;
+}
+
+.background-symbols span:nth-child(1) { left: 5%; animation-delay: 0s; }
+.background-symbols span:nth-child(2) { left: 15%; animation-delay: 4s; }
+.background-symbols span:nth-child(3) { left: 25%; animation-delay: 8s; }
+.background-symbols span:nth-child(4) { left: 35%; animation-delay: 12s; }
+.background-symbols span:nth-child(5) { left: 45%; animation-delay: 16s; }
+.background-symbols span:nth-child(6) { left: 55%; animation-delay: 2s; }
+.background-symbols span:nth-child(7) { left: 65%; animation-delay: 6s; }
+.background-symbols span:nth-child(8) { left: 75%; animation-delay: 10s; }
+.background-symbols span:nth-child(9) { left: 85%; animation-delay: 14s; }
+.background-symbols span:nth-child(10) { left: 95%; animation-delay: 18s; }
+
+@keyframes floatDollar {
+  0% {
+    top: 100%;
+    transform: translateX(0) scale(0.9);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.05;
+  }
+  50% {
+    transform: translateX(-10px) scale(1.1);
+    opacity: 0.08;
+  }
+  80% {
+    transform: translateX(10px) scale(1);
+    opacity: 0.04;
+  }
+  100% {
+    top: -10%;
+    transform: translateX(0) scale(0.9);
+    opacity: 0;
+  }
+}
+
+/* Resto de estilos principales para que no quede todo en blanco */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #111;
+  text-decoration: none;
+}
+.logo-accent {
+  color: #b5ff00;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 1.2rem;
+}
+.menu a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.menu a:hover {
+  color: #b5ff00;
+}
+
+.btn-menu {
+  margin-left: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.hero {
+  padding: 6rem 2rem;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  color: #444;
+}
+.btn-cta {
+  margin-top: 1.5rem;
+  display: inline-block;
+  background-color: #b5ff00;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.btn-cta:hover {
+  background-color: #ccff33;
+}
+
+.seccion {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.card {
+  background: #f8f8f8;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card .icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial {
+  max-width: 400px;
+  margin: 1rem auto;
+  background: #f0f0f0;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  font-style: italic;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+label {
+  display: block;
+  font-weight: 600;
+}
+input, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+.btn-submit {
+  background-color: #b5ff00;
+  color: #111;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.btn-submit:hover {
+  background-color: #ccff33;
+}
+
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+.social a {
+  margin: 0 0.5rem;
+  color: #b5ff00;
+  text-decoration: none;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2rem;
+  background-color: #25D366;
+  color: white;
+  padding: 0.8rem 1rem;
+  border-radius: 50%;
+  text-decoration: none;
+  z-index: 100;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: reveal 0.8s ease-out forwards;
+}
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Modo oscuro funcional */
+body.dark-mode {
+  background-color: #111;
+  color: #f1f1f1;
+}
+body.dark-mode .navbar,
+body.dark-mode .card,
+body.dark-mode .testimonial,
+body.dark-mode form,
+body.dark-mode footer {
+  background-color: #222;
+  color: #f1f1f1;
+}
+body.dark-mode a {
+  color: #3DCF96;
+}
+
+/* Cards con volumen */
+.card, .testimonial, form {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  margin-bottom: 2rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+.card:hover, .testimonial:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.15);
+}
+body.dark-mode .card,
+body.dark-mode .testimonial,
+body.dark-mode form {
+  background-color: #2a2a2a;
+  box-shadow: 0 4px 14px rgba(255,255,255,0.04);
+}
+body.dark-mode .card:hover,
+body.dark-mode .testimonial:hover {
+  box-shadow: 0 8px 28px rgba(255,255,255,0.08);
+}
+
+/* Títulos centrados */
+section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Eliminar espacio vacío al final */
+footer {
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+}
+
+@keyframes floatSymbol {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-50px) rotate(360deg); }
+}
+
+
+/* Estilo visual tipo globoflexia para los signos $ flotantes */
+.dollar-style {
+  text-shadow:
+    1px 1px 0 #2c2c2c,
+    -1px -1px 0 #2c2c2c,
+    1px -1px 0 #2c2c2c,
+    -1px 1px 0 #2c2c2c;
+  filter: drop-shadow(0 0 4px #3DCF96);
+  font-weight: 900;
+  font-family: 'Arial Black', sans-serif;
+}
+
+
+/* Dólares más visibles con sombra y color intenso */
+.dollar-style {
+  text-shadow:
+    1px 1px 2px rgba(0,0,0,0.4),
+    -1px -1px 2px rgba(0,0,0,0.4);
+  filter: drop-shadow(0 0 6px #3DCF96);
+  font-weight: 900;
+  font-family: 'Arial Black', sans-serif;
+  z-index: 0;
+}
+
+
+/* $ flotantes bien visibles en claro y oscuro */
+.dollar-style {
+  text-shadow:
+    1px 1px 2px rgba(0,0,0,0.4),
+    -1px -1px 2px rgba(0,0,0,0.4);
+  filter: drop-shadow(0 0 6px #3DCF96);
+  font-weight: 900;
+  font-family: 'Arial Black', sans-serif;
+  z-index: 0;
+}
+
+/* Modo oscuro completo para elementos */
+body.dark-mode {
+  background-color: #111;
+  color: #f1f1f1;
+}
+body.dark-mode .navbar,
+body.dark-mode .card,
+body.dark-mode .testimonial,
+body.dark-mode form,
+body.dark-mode footer {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+body.dark-mode a {
+  color: #3DCF96;
+}
+
+
+/* Estilos integrados para el botón de modo oscuro */
+#darkModeToggle {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+#darkModeToggle:hover {
+  transform: scale(1.2);
+}
+
+
+/* Centrar el menú de navegación y evitar superposición con el botón de modo oscuro */
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-right: 3rem; /* Deja espacio para el botón */
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #3DCF96;
+}
+
+
+/* Fijar solo el menú superior (más oscuro) */
+header {
+  position: sticky;
+  top: 0;
+  background-color: #1a1a1a;
+  z-index: 1000;
+}
+
+
+/* HEADER sticky con cambio sutil al hacer scroll */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(26, 26, 26, 0.95); /* casi igual, con leve transparencia */
+  backdrop-filter: blur(4px); /* efecto sutil al hacer scroll */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* sombra leve */
+  transition: all 0.3s ease-in-out;
+}
+
+/* === Preloader === */
+#preloader {
+  background-color: #0e0e0e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-out;
+}
+
+#preloader .loader {
+  border: 6px solid #3DCF96;
+  border-top: 6px solid transparent;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* === RESPONSIVE DESIGN === */
+
+@media (max-width: 1024px) {
+  header nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero, .section, .servicios, .testimonios, .contacto {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .servicio-card, .testimonial-card {
+    width: 90% !important;
+    margin: 1rem auto;
+  }
+
+  .contact-form {
+    width: 90% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  h1, h2, h3 {
+    font-size: 1.5rem;
+  }
+
+  .boton {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .modo-switch {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transform: scale(0.9);
+  }
+}
+
+
+/* Oculta el header al scrollear */
+.ocultar-header {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Estilos para la sección de mapa */
+.ubicacion-section {
+  padding: 60px 20px;
+  background-color: var(--bg-color);
+  text-align: center;
+}
+
+.ubicacion-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.map-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}

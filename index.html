@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Gestoría Ágil</title>
+<meta content="Consultora y gestoría digital con estilo moderno y vibrante, inspirada en fintechs." name="description"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<script>
+(function () {
+  try {
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (isDark) document.documentElement.classList.add('dark');
+  } catch (e) {}
+})();
+</script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="preloader">
+<div class="loader"></div>
+</div>
+<header>
+<nav class="navbar">
+<a class="logo" href="#">Gestoría<span class="logo-accent">Ágil</span></a>
+<ul class="menu">
+<li><a href="#home">Inicio</a></li>
+<li><a href="#servicios">Servicios</a></li>
+<li><a href="#testimonios">Testimonios</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+</nav>
+<button id="darkModeToggle" style="position:absolute;top:1rem;right:1rem;z-index:1000;">🌓</button>
+</header>
+<main><div class="hero" id="home">
+<h1>Tu gestoría 100% digital</h1>
+<p>Agilizamos trámites contables con tecnología y estilo.</p>
+<a class="btn-cta" href="#contacto">Empezá ahora</a>
+</div>
+<div class="background-symbols">
+<span>$</span><span>
+</div>
+<section class="seccion" id="servicios">
+<h2>Nuestros Servicios</h2>
+<div class="cards">
+<a class="servicio-link" href="alta-sociedades.html"><div class="card reveal">
+<div class="icon">🏢</div>
+<h3>Alta de Sociedades</h3>
+<p>Registramos tu empresa sin pérdida de tiempo.</p>
+</div></a>
+<a class="servicio-link" href="afip-online.html"><div class="card reveal">
+<div class="icon">💻</div>
+<h3>AFIP Online</h3>
+<p>Presentaciones y consultas 100% web.</p>
+</div></a>
+<a class="servicio-link" href="liquidacion-sueldos.html"><div class="card reveal">
+<div class="icon">🧾</div>
+<h3>Liquidación de Sueldos</h3>
+<p>Sueldos claros y a tiempo, siempre.</p>
+</div></a>
+<a class="servicio-link" href="asesoria-financiera.html"><div class="card reveal">
+<div class="icon">📊</div>
+<h3>Asesoría Financiera</h3>
+<p>Detectamos fugas y optimizamos tu flujo de caja.</p>
+</div></a>
+</div>
+</section>
+<section class="seccion" id="testimonios">
+<h2>Lo que dicen</h2>
+<div class="carousel" id="carousel">
+<blockquote class="testimonial reveal">
+          “Excelente servicio y respuesta inmediata.”<br/><cite>— Carla G.</cite>
+</blockquote>
+<blockquote class="testimonial reveal">
+          “Profesionales, claros y súper eficientes.”<br/><cite>— Martín R.</cite>
+</blockquote>
+<blockquote class="testimonial reveal">
+          “Se nota diferencia con lo tradicional.”<br/><cite>— Laura P.</cite>
+</blockquote>
+</div>
+</section>
+<section class="seccion" id="contacto">
+<h2>Contacto</h2>
+<form class="reveal" id="form-contacto" novalidate="" action="/enviar" method="POST">
+<div class="form-group">
+<label for="nombre">Nombre completo</label>
+<input id="nombre" name="nombre" required="" type="text"/>
+<span class="error" id="error-nombre"></span>
+</div>
+<div class="form-group">
+<label for="email">Email</label>
+<input id="email" name="email" required="" type="email"/>
+<span class="error" id="error-email"></span>
+</div>
+<div class="form-group">
+<label for="mensaje">Mensaje</label>
+<textarea id="mensaje" name="mensaje" required="" rows="4"></textarea>
+<span class="error" id="error-mensaje"></span>
+</div>
+<button class="btn-submit" type="submit">Enviar</button>
+</form>
+</section>
+
+<section id="ubicacion" class="ubicacion-section">
+  <h2>¿Dónde estamos?</h2>
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d212.07966186852204!2d-60.53051202672264!3d-31.73570511988906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1753630917438!5m2!1ses!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+</main>
+<footer>
+<ul class="footer-links">
+<li><a href="#home">Inicio</a></li>
+<li><a href="#servicios">Servicios</a></li>
+<li><a href="#testimonios">Testimonios</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+<div class="social">
+<a aria-label="Facebook" href="#">Fb</a>
+<a aria-label="LinkedIn" href="#">In</a>
+<a aria-label="Instagram" href="#">Ig</a>
+</div>
+<p>© 2025 Gestoría Ágil</p>
+</footer>
+<a aria-label="WhatsApp" class="whatsapp" href="https://wa.me/5493412345678" target="_blank">💬</a>
+<script src="script.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("gracias") === "true") {
+      const div = document.createElement("div");
+      div.textContent = "¡Gracias por contactarnos!";
+      div.style.position = "fixed";
+      div.style.top = "20px";
+      div.style.left = "50%";
+      div.style.transform = "translateX(-50%)";
+      div.style.background = "#4caf50";
+      div.style.color = "#fff";
+      div.style.padding = "10px 20px";
+      div.style.borderRadius = "5px";
+      div.style.zIndex = "9999";
+      document.body.appendChild(div);
+
+      setTimeout(() => {
+        div.remove();
+      }, 5000); // Lo borra después de 5 segundos
+    }
+  });
+</script>
+</body>
+</html>
